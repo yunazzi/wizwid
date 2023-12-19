@@ -1,0 +1,192 @@
+@import './fonts.css';
+@import './reset.css';
+@import './common.css';
+
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 99; 
+    min-height: 45px;
+    max-width: 768px;
+    width: 100%;
+    transition: 0.3s;
+    will-change: transform,background;
+}
+.header .logo{
+    position: relative;
+}
+.header .logo{
+    background-image: url(https://mb.wizwid.com/resources/images/common/logo_white.svg);
+    width: 130px; height: 30px;
+    display: block;
+    position: absolute;
+    top: 7.5px;
+    left: 5px;
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+}
+.header .logo svg{
+    position: absolute;
+    top: 7.5px;
+    left: 5px;
+}
+.header [class*=btn-]{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    width: 30px; height: 30px;
+    background-repeat: no-repeat;
+    background-size: 24px 100%;
+}
+.header .btn-search{
+    right: 51px;
+    background-image: url(https://mb.wizwid.com/resources/images/common/ico_search_m01.svg);
+}
+.header .btn-cart{
+    right: 13px;
+    background-image: url(https://mb.wizwid.com/resources/images/common/ico_cart_m01.svg);
+}
+.header .btn-cart .count{
+    position: absolute;
+    top: 6px; right: -4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 15px;
+    background: #000;
+    border-radius: 7.5px;
+    text-align: center;
+    padding: 0 6px;
+}
+
+/* 스크롤시 */
+.header.fix{
+    margin-top: 0;
+}
+.header.fix .logo{
+    background-image: url(https://mb.wizwid.com/resources/images/common/logo_black.svg);
+}
+.header.fix .btn-search{
+    background-image: url(https://mb.wizwid.com/resources/images/common/ico_search_m02.svg);
+}
+.header.fix .btn-cart{
+    background-image: url(https://mb.wizwid.com/resources/images/common/ico_cart_m02.svg);
+}
+
+.header.hide{
+    background: #fff;
+    transform: translateY(-100%);
+}
+.header.down{
+    transform: translateY(0%);
+}
+
+
+
+
+/* footer */
+.footer{
+    position: relative;
+    background: #222;
+    padding: 40px 15px 200px 15px;
+    color: #fff;
+}
+.footer .login-area{
+    margin-bottom: 40px;
+}
+.footer .login-area span{
+    display: inline-block;
+    margin-bottom: 0;
+    line-height: 18px;
+}
+.footer .login-area .login{
+    padding-right: 20px;
+}
+.footer .login-area .join{
+    position: relative;
+    padding-left: 21px;
+}
+.footer .login-area .join::after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+    background: #777777;
+    width: 1px;
+}
+.footer .footer-logo{
+    width: 80px; height: auto;
+    margin-bottom: 10px;
+}
+.footer .addr-area{
+    margin-bottom: 40px;
+}
+.footer .addr-area strong{
+    display: inline-block;
+    font-size: 13px;
+    padding: 0px 26px 0px 0px;
+    font-weight: 500;
+    line-height: 18px;
+    background-image: url(https://mb.wizwid.com/resources/images/common/w_arrow_down01.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.footer .addr-area .info-area{
+    display: none;
+}
+.footer .addr-area.on strong{
+    background-image: url(https://mb.wizwid.com/resources/images/common/w_arrow_up01.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.footer .addr-area.on .info-area{
+    display: block;
+}
+.footer .info-area{
+    margin-top: 20px;
+}
+.footer .info-area li{
+    font-size: 11px;
+    line-height: 18px;
+}
+.footer .info-area li span{
+    position: relative;
+    display: inline-block;
+    padding-left: 14px;
+}
+.footer .info-area li span::before{
+    content: '';
+    position: absolute;
+    top: 6.5px;
+    bottom: 6.5px;
+    left: 6.5px;
+    background: #fff;
+    width: 1px;
+}
+.footer .alert-area{
+    margin-bottom: 40px;
+    font-size: 11px;
+    line-height: 18px;
+    color: #999999;
+    word-break: keep-all;
+}
+.footer .infolist-area{
+    margin-bottom: 40px;
+}
+.footer .infolist-area li{
+    display: inline-block;
+    font-size: 11px;
+    line-height: 14px;
+    color: #ffffff;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+.footer .sns-area{
+    display: flex;
+    gap: 20px;
+}
+.footer .sns-area li a{
+    display: inline-block;
+    width: 52px; height: 52px;
+}
