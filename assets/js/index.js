@@ -97,12 +97,6 @@ var swiper3 = new Swiper('.benefit-slide',{
         type: 'progressbar'
     },
     loop:true
-    // on: {
-    //     progress: function () {
-    //         var progressBar = this.pagination.el.querySelector('.swiper-pagination-progressbar-fill');
-    //         progressBar.style.transform = 'scaleX(' + this.progress + ')'; // 진행 막대를 scaleX로 조절하여 점점 채우기
-    //     }
-    // }
 })
 
 var swiper4 = new Swiper('.wish-slide',{
