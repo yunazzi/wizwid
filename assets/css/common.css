@@ -1,180 +1,31 @@
-.wrapper{
-    max-width: 768px;
-    min-width: 320px;
-    position: relative;
-    margin: 0 auto;
-    min-height: 100vh;
-    background: #fff;
-    box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.05);
-}
+.wrapper{ position: relative; max-width: 768px; min-width: 320px; margin: 0 auto; min-height: 100vh; background: #fff; box-shadow: 0px 7px 8px rgba(0, 0, 0, 0.05); }
+.headline{ margin: 0px 15px 0px 15px; font-size: 19px; line-height: 25px; font-weight: 500; margin-bottom: 20px; text-transform: uppercase; }
+.blind{ position: absolute; overflow: hidden; margin: -1px; width: 1px; height: 1px; clip: rect(0,0,0,0); }
 
-.headline{
-    margin: 0px 15px 0px 15px;
-    font-size: 19px;
-    line-height: 25px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.blind{
-    margin: -1px;
-    position: absolute;
-    width: 1px; height: 1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-}
-
-.nav-bar{
-    position: fixed;
-    left: 0; right: 0;
-    width: 100%;
-    bottom: 0;
-    z-index: 99;
-    transition-duration: 0.3s;
-    transform: translateY(100%);
-    will-change: transform;
-}
-.nav-bar .wrap{
-    display: flex;
-    max-width: 768px;
-    min-width: 320px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 15px 10px;
-    /* padding-bottom을 줘서 위로 올라가게끔 하면됨 */
-}
-.nav-bar.show{
-    transform: translateY(0%);
-}
-.nav-bar .tab-left{
-    margin-right: 6px;
-    background: #000;
-    width: 50px; height: 50px;
-    border-radius: 50%;
-    font-size: 0;
-}
-.nav-bar .tab-left a{
-    background: url(https://mb.wizwid.com/resources/images/common/tab_bar_home.svg) no-repeat center center;
-    width: 50px; height: 50px;
-    display: inline-block;
-}
-.nav-bar .tab-right{
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    font-size: 0;
-    flex: 1 1 auto;
-    height: 50px;
-    border-radius: 25px;
-}
-.nav-bar .tab-right [class*=btn-]{
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 50px; height: 50px;
-
-}
-.nav-bar .tab-right .btn-menu{
-    background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_menu.svg);
-}
-.nav-bar .tab-right .btn-history{
-    background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_history.svg);
-}
-.nav-bar .tab-right .btn-wish{
-    background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_wish.svg);
-}
-.nav-bar .tab-right .btn-mypage{
-    background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_mypage.svg);
-}
+.nav-bar{ position: fixed; left: 0; right: 0; width: 100%; bottom: 0; z-index: 99; transition-duration: 0.3s; transform: translateY(100%); will-change: transform; }
+.nav-bar .wrap{ display: flex; max-width: 768px; min-width: 320px; margin: 0 auto; width: 100%; padding: 0 15px 10px; }
+.nav-bar.show{ transform: translateY(0%); }
+.nav-bar .tab-left{ margin-right: 6px; background: #000; width: 50px; height: 50px; border-radius: 50%; font-size: 0; }
+.nav-bar .tab-left a{ display: inline-block; background: url(https://mb.wizwid.com/resources/images/common/tab_bar_home.svg) no-repeat center center; width: 50px; height: 50px; }
+.nav-bar .tab-right{ display: flex; flex: 1 1 auto; justify-content: space-between; background: #000; padding: 0 20px; font-size: 0; height: 50px; border-radius: 25px; }
+.nav-bar .tab-right [class*=btn-]{ display: block; background-repeat: no-repeat; background-position: center center; width: 50px; height: 50px; }
+.nav-bar .tab-right .btn-menu{ background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_menu.svg); }
+.nav-bar .tab-right .btn-history{ background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_history.svg); }
+.nav-bar .tab-right .btn-wish{ background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_wish.svg); }
+.nav-bar .tab-right .btn-mypage{ background-image: url(https://mb.wizwid.com/resources/images/common/tab_bar_mypage.svg); }
 
 
-.btn-more{
-    background-image: url(https://mb.wizwid.com/resources/images/common/ico_more_01.svg);
-    background-repeat: no-repeat;
-    width: 30px; height: 30px;
-    position: absolute;
-    top: -2px; right: 6px;
-}
+.btn-more{ position: absolute; background-image: url(https://mb.wizwid.com/resources/images/common/ico_more_01.svg); background-repeat: no-repeat; width: 30px; height: 30px; top: -2px; right: 6px; }
 
-.brand{
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 500;
-    margin-bottom: 4px;
-}
-.p-name{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.brand{ font-size: 12px; line-height: 18px; font-weight: 500; margin-bottom: 4px; }
+.p-name{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-right: 10px; font-size: 12px; color: #777777; line-height: 18px; margin-bottom: 12px; }
+.price{ display: flex; font-size: 14px; }
+.price-curr{ line-height: 18px; font-weight: 500; margin-right: 2px; }
+.price-sale{ line-height: 18px; font-size: 14px; font-weight: 500; color: #ff4600; margin-left: 7px; }
 
-    margin-right: 10px;
-    font-size: 12px;
-    color: #777777;
-    line-height: 18px;
-    margin-bottom: 12px;
-}
-.price{
-    display: flex;
-    font-size: 14px;
-}
-.price-curr{
-    line-height: 18px;
-    font-weight: 500;
-    margin-right: 2px;
-}
-.price-sale{
-    line-height: 18px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #ff4600;
-    margin-left: 7px;
-}
-
-.like{
-    background-image: url(https://mb.wizwid.com/resources/images/common/ico_like_01.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 36px; height: 34px;
-
-    position: absolute;
-    top: 0; right: 0;
-}
-.change{
-    background-image: url(https://mb.wizwid.com/resources/images/common/ico_like_02.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 36px; height: 34px;
-
-    position: absolute;
-    top: 0; right: 0;
-}
-.btn-gotop{
-    position: fixed;
-    bottom: 0px; left: 0; right: 0;
-    z-index: 100;
-    transform: translateY(0%);
-    transition: transform 0.3s;
-    opacity: 1;
-}
-.btn-gotop .gotop-wrap{
-    max-width: 768px;
-    min-width: 320px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 15px 10px;
-}
-.btn-gotop button{
-    margin-left: 698px;
-    width: 40px; height: 40px;
-    background-image: url(https://mb.wizwid.com/resources/images/common/btn_top.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0px 0px 16px rgba(0,0,0,0.1);
-}
-.btn-gotop.show{
-    transform: translateY(-120%);
-}
+.like{ position: absolute; top: 0; right: 0; background-image: url(https://mb.wizwid.com/resources/images/common/ico_like_01.svg); background-repeat: no-repeat; background-position: center center; width: 36px; height: 34px; }
+.change{ position: absolute; top: 0; right: 0; background-image: url(https://mb.wizwid.com/resources/images/common/ico_like_02.svg); background-repeat: no-repeat; background-position: center center; width: 36px; height: 34px; }
+.btn-gotop{ position: fixed; bottom: 0px; left: 0; right: 0; z-index: 100; transform: translateY(0%); transition: transform 0.3s; opacity: 1; }
+.btn-gotop .gotop-wrap{ max-width: 768px; min-width: 320px; margin: 0 auto; width: 100%; padding: 0 15px 10px; }
+.btn-gotop button{ margin-left: 698px; width: 40px; height: 40px; background-image: url(https://mb.wizwid.com/resources/images/common/btn_top.svg); background-repeat: no-repeat; background-position: center center; background-color: #fff; border-radius: 50%; box-shadow: 0px 0px 16px rgba(0,0,0,0.1); }
+.btn-gotop.show{ transform: translateY(-120%); }
