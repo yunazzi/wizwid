@@ -1,19 +1,6 @@
-gsap.to('.sc-visual',{
-    scrollTrigger:{
-        trigger:'.sc-visual',
-        start:'0% 0%',
-        end:'100% 0%',
-        scrub:1,
-    },
-    opacity:0.2
-})
-
-
 //header와 main-content 스크롤이벤트
 
 let lastScrollTop = 0;
-//window.scroll위에 있어야 초기값이 0으로 잡히는거지, 안에 있으면 스크롤 할떄마다 0이 되어버림
-// 그래서 위에있어야함
 
 $(window).scroll(function(){
 
@@ -34,7 +21,6 @@ $(window).scroll(function(){
     if (curr > contentOffset) {
 
         if (curr > lastScrollTop) {
-            //둘다 참 둘다 없어야됨
             $('.header,.main-content').removeClass('down')
         } else {
             $('.header,.main-content').addClass('down')
@@ -67,6 +53,16 @@ $('.btn-gotop').click(function(){
     window.scrollTo({top:0,behavior:'smooth'})
 })
 
+//sc-visual
+gsap.to('.sc-visual',{
+    scrollTrigger:{
+        trigger:'.sc-visual',
+        start:'0% 0%',
+        end:'100% 0%',
+        scrub:1,
+    },
+    opacity:0.2
+})
 
 var swiper = new Swiper('.main-slide',{
     autoplay:{
@@ -80,6 +76,7 @@ var swiper = new Swiper('.main-slide',{
     loop:true
 })
 
+//sc-newin
 var swiper2 = new Swiper('.new-product-slide',{
     slidesPerView:'auto',
     spaceBetween:5,
