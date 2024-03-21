@@ -119,7 +119,6 @@ var swiper6 = new Swiper('.keyword-slide',{
         clickable: true
     }
 })
-//loop가 되기 때문에 first-child를 잡으면 안됨 -> first-child가 슬라이드 될때마다 바뀜
 
 var swiper7 = new Swiper('.flash-slide',{
     slidesPerView:'auto',
@@ -151,21 +150,24 @@ var brand1 = new Swiper('.sc-brand .brand-tab.swiper',{
     spaceBetween:10,
 })
 var brand2 = new Swiper('.sc-brand .area1.swiper',{
-on:{
-    "slideChange":()=>{
-        $('.sc-brand .brand-tab .swiper-slide').eq(brand2.realIndex).addClass('on').siblings().removeClass('on')
-        brand1.slideTo(brand2.realIndex)
-    }
-}
+// on:{
+//     "slideChange":()=>{
+//         $('.sc-brand .brand-tab .swiper-slide').eq(brand2.realIndex).addClass('on').siblings().removeClass('on')
+//         brand1.slideTo(brand2.realIndex)
+//     }
+// }
 })
+
 $('.sc-brand .brand-tab .swiper-slide').click(function(){
+    console.log($(this).index())
     $(this).addClass('on').siblings().removeClass('on')
     brand2.slideTo($(this).index())
 })
 
 
-// like 이미지 변경
 
+
+// like 이미지 변경
 const img = ['https://mb.wizwid.com/resources/images/common/ico_like_01.svg','https://mb.wizwid.com/resources/images/common/ico_like_02.svg']
 let currIndex = 0;
 
@@ -199,7 +201,6 @@ $('.sc-editorial .editorial-tab .swiper-slide').click(function(){
 
 
 //디데이 계산하기
-
 function diffDay(set,frame) {
     setInterval(() => {
         const setTime = new Date(set);
@@ -248,7 +249,7 @@ function diffDay(set,frame) {
                 </div>
             </div>
         </li>`;
-        });//반복문끝
+        });
 
         $('#wishDataList').html(html)
     })
